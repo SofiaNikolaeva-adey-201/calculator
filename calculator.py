@@ -16,43 +16,56 @@ window.show()
 def click_plus():
     first_count = form.textEdit.toPlainText()
     second_count = form.textEdit_2.toPlainText()
-    print(float(first_count) + float(second_count))
+    result = float(first_count) + float(second_count)
+    print(result)
+    form.label_5.setText("%s" %result)
+    
 
 
 def click_minus():
     first_count = form.textEdit.toPlainText()
     second_count = form.textEdit_2.toPlainText()
-    print(float(first_count) - float(second_count))
+    result = float(first_count) - float(second_count)
+    print(result)
+    form.label_5.setText("%s" %result)
 
 def click_multiply():
     first_count = form.textEdit.toPlainText()
     second_count = form.textEdit_2.toPlainText()
-    print(float(first_count) * float(second_count))
+    result = float(first_count) * float(second_count)
+    print(result)
+    form.label_5.setText("%s" %result)
 
 def click_simple_division():
     try:
         first_count = form.textEdit.toPlainText()
         second_count = form.textEdit_2.toPlainText()
-        print(float(first_count) / float(second_count))
+        result = float(first_count) / float(second_count)
+        print(result)
+        form.label_5.setText("%s" %result)
     except ZeroDivisionError:
-        print('На ноль делить нельзя')
+        form.label_5.setText('На ноль делить нельзя')
 
 
 def click_whole_division():
     try:
         first_count = form.textEdit.toPlainText()
         second_count = form.textEdit_2.toPlainText()
-        print(float(first_count) // float(second_count))
+        result = float(first_count) // float(second_count)
+        print(result)
+        form.label_5.setText("целая часть от деления: %s" %result)
     except ZeroDivisionError:
-        print('На ноль делить нельзя')
+        form.label_5.setText('На ноль делить нельзя')
 
 def click_residual_division():
     try:
         first_count = form.textEdit.toPlainText()
         second_count = form.textEdit_2.toPlainText()
-        print(float(first_count) % float(second_count))
+        result = float(first_count) % float(second_count)
+        print(result)
+        form.label_5.setText("остаток от деления: %s" %result)
     except ZeroDivisionError:
-        print('На ноль делить нельзя')
+        form.label_5.setText('На ноль делить нельзя')
     
 
 
